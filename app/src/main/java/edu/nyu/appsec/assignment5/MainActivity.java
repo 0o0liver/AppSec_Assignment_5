@@ -1,22 +1,27 @@
 package edu.nyu.appsec.assignment5;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.net.Uri;
-import android.net.http.SslError;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import android.content.Intent;
+import android.Manifest;
+import android.content.Context;
+
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+
+import android.net.http.SslError;
+import android.support.v4.app.ActivityCompat;
+
+import android.webkit.SslErrorHandler;
+
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -39,8 +44,10 @@ public class MainActivity extends AppCompatActivity{
                 return false;
             }
 
+            /* if the URL does not equal the KNOW_URL, we shouldn't just open it in a browser.
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
+            */
             return true;
         }
     }
@@ -93,7 +100,7 @@ public class MainActivity extends AppCompatActivity{
 
         WebSettings settings = view.getSettings();
 
-        settings.setJavaScriptEnabled(true);
+        settings.setJavaScriptEnabled(true); // JavaScript is needed for button redirection.
 
         /* The following two lines are not needed, and they are not recommended by android developer reference page.
         settings.setAllowFileAccessFromFileURLs(true);
