@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.nyu.appsec.assignment5">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- The only permission we need is INTERNET, getting rid of all other permission.
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,7 +22,6 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
@@ -69,6 +71,7 @@
     <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ" />
     <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    -->
 
     <application
         android:allowBackup="true"
